@@ -16,7 +16,7 @@ const readFile = async (fileName: string): Promise<string | any> => {
 const streamToArray = (readableStream: string): Array<string> => {
   return readableStream
     .toLowerCase()
-    .replace(/[.,\/#"'?!$%\^&\*;:{}=\-_`~()]/g, "")
+    .replace(/[.,\/#"'?!$%\^&\*;:{}=\_`~()<>]/g, "")
     .split(/\s+/);
 };
 
